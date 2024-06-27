@@ -1,0 +1,9 @@
+[package]
+name = "sqlite3"
+version = "0.1.0"
+authors = ["Lance Hart <me@lancehart.ca>"]
+edition = "2021"
+description = "Raw bindings for SQLite3"
+repository = "https://github.com/shipsimfan/lib-sqlite3"
+license = "GPL-3.0-or-later"
+publish = false
