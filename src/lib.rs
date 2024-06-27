@@ -5,3 +5,9 @@
 #![deny(rustdoc::unescaped_backticks)]
 #![deny(rustdoc::redundant_explicit_links)]
 #![warn(rustdoc::broken_intra_doc_links)]
+
+mod functions;
+mod types;
+
+pub use functions::sqlite3_open;
+pub use types::SQLite3;
