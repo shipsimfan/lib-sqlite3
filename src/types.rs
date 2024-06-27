@@ -1,5 +1,9 @@
 use std::ffi::c_void;
 
+// rustdoc imports
+#[allow(unused_imports)]
+use crate::sqlite3_open;
+
 /// Each open SQLite database is represented by a pointer to an instance of the opaque structure.
 /// It is useful to think of an [`SQLite3`] pointer as an object. The [`sqlite3_open`],
 /// [`sqlite3_open16`], and [`sqlite3_open_v2`] interfaces are its constructors, and
