@@ -3,6 +3,8 @@ use std::ffi::{c_char, c_int};
 
 // rustdoc imports
 #[allow(unused_imports)]
+use crate::{SQLITE_CORRUPT, SQLITE_OK};
+#[allow(unused_imports)]
 use std::ptr::null_mut;
 
 #[link(name = "sqlite3")]
