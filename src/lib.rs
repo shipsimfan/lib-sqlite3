@@ -9,7 +9,9 @@
 mod constants;
 mod functions;
 mod types;
+mod utility;
 
 pub use constants::*;
 pub use functions::{sqlite3_close, sqlite3_errstr, sqlite3_open};
 pub use types::SQLite3;
+pub use utility::SQLiteError;
