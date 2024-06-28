@@ -41,7 +41,7 @@ macro_rules! try_sqlite3 {
         if result == $crate::SQLITE_OK {
             Ok(result)
         } else {
-            Err($crate::SQLiteError::new(code))
+            Err($crate::SQLiteError::new(result))
         }
     }};
 }
