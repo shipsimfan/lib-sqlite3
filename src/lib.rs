@@ -13,7 +13,7 @@ mod utility;
 
 pub use constants::*;
 pub use functions::{
-    sqlite3_close, sqlite3_errstr, sqlite3_open, sqlite3_prepare_v2, sqlite3_step,
+    sqlite3_close, sqlite3_errstr, sqlite3_finalize, sqlite3_open, sqlite3_prepare_v2, sqlite3_step,
 };
 pub use types::{SQLite3, SQLite3Stmt};
 pub use utility::SQLiteError;
