@@ -1,3 +1,4 @@
+mod bind;
 mod close;
 mod column;
 mod errstr;
@@ -6,6 +7,7 @@ mod open;
 mod prepare_v2;
 mod step;
 
+pub use bind::*;
 pub use close::sqlite3_close;
 pub use column::*;
 pub use errstr::sqlite3_errstr;
