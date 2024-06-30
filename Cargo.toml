@@ -7,3 +7,6 @@ description = "Raw bindings for SQLite3"
 repository = "https://github.com/shipsimfan/lib-sqlite3"
 license = "GPL-3.0-or-later"
 publish = false
+
+[build-dependencies]
+cc = "1.0"
