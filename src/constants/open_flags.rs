@@ -1,0 +1,24 @@
+use std::ffi::c_int;
+
+pub const SQLITE_OPEN_READONLY: c_int = 0x00000001;
+pub const SQLITE_OPEN_READWRITE: c_int = 0x00000002;
+pub const SQLITE_OPEN_CREATE: c_int = 0x00000004;
+pub const SQLITE_OPEN_DELETEONCLOSE: c_int = 0x00000008;
+pub const SQLITE_OPEN_EXCLUSIVE: c_int = 0x00000010;
+pub const SQLITE_OPEN_AUTOPROXY: c_int = 0x00000020;
+pub const SQLITE_OPEN_URI: c_int = 0x00000040;
+pub const SQLITE_OPEN_MEMORY: c_int = 0x00000080;
+pub const SQLITE_OPEN_MAIN_DB: c_int = 0x00000100;
+pub const SQLITE_OPEN_TEMP_DB: c_int = 0x00000200;
+pub const SQLITE_OPEN_TRANSIENT_DB: c_int = 0x00000400;
+pub const SQLITE_OPEN_MAIN_JOURNAL: c_int = 0x00000800;
+pub const SQLITE_OPEN_TEMP_JOURNAL: c_int = 0x00001000;
+pub const SQLITE_OPEN_SUBJOURNAL: c_int = 0x00002000;
+pub const SQLITE_OPEN_SUPER_JOURNAL: c_int = 0x00004000;
+pub const SQLITE_OPEN_NOMUTEX: c_int = 0x00008000;
+pub const SQLITE_OPEN_FULLMUTEX: c_int = 0x00010000;
+pub const SQLITE_OPEN_SHAREDCACHE: c_int = 0x00020000;
+pub const SQLITE_OPEN_PRIVATECACHE: c_int = 0x00040000;
+pub const SQLITE_OPEN_WAL: c_int = 0x00080000;
+pub const SQLITE_OPEN_NOFOLLOW: c_int = 0x01000000;
+pub const SQLITE_OPEN_EXRESCODE: c_int = 0x02000000;
