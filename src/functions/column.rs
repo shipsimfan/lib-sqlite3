@@ -1,5 +1,5 @@
 use crate::{SQLite3Int64, SQLite3Stmt};
-use std::ffi::{c_double, c_int, c_uchar, c_void};
+use std::ffi::{c_char, c_double, c_int, c_uchar, c_void};
 
 #[link(name = "sqlite3")]
 extern "C" {
@@ -12,4 +12,8 @@ extern "C" {
     pub fn sqlite3_column_bytes(stmt: *mut SQLite3Stmt, col: c_int) -> c_int;
     pub fn sqlite3_column_bytes16(stmt: *mut SQLite3Stmt, col: c_int) -> c_int;
     pub fn sqlite3_column_type(stmt: *mut SQLite3Stmt, col: c_int) -> c_int;
+
+    pub fn sqlite3_column_count(stmt: *mut SQLite3Stmt) -> c_int;
+    pub fn sqlite3_column_name(stmt: *mut SQLite3Stmt, n: c_int) -> *const c_char;
+    pub fn sqlite3_column_name16(stmt: *mut SQLite3Stmt, n: c_int) -> *const c_void;
 }
