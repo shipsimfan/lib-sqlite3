@@ -1,7 +1,8 @@
 use crate::{SQLite3, SQLite3Stmt};
 use std::ffi::{c_char, c_int, c_uint, c_void};
 
-#[link(name = "sqlite3")]
+#[cfg_attr(target_os = "windows", link(name = "sqlite3-win"))]
+
 extern "C" {
     pub fn sqlite3_prepare(
         db: *mut SQLite3,

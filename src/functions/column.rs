@@ -1,7 +1,8 @@
 use crate::{SQLite3Int64, SQLite3Stmt};
 use std::ffi::{c_char, c_double, c_int, c_uchar, c_void};
 
-#[link(name = "sqlite3")]
+#[cfg_attr(target_os = "windows", link(name = "sqlite3-win"))]
+
 extern "C" {
     pub fn sqlite3_column_blob(stmt: *mut SQLite3Stmt, col: c_int) -> *const c_void;
     pub fn sqlite3_column_double(stmt: *mut SQLite3Stmt, col: c_int) -> c_double;

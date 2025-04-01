@@ -1,7 +1,8 @@
 use crate::SQLite3;
 use std::ffi::{c_char, c_int, c_void};
 
-#[link(name = "sqlite3")]
+#[cfg_attr(target_os = "windows", link(name = "sqlite3-win"))]
+
 extern "C" {
     pub fn sqlite3_errcode(db: *mut SQLite3) -> c_int;
     pub fn sqlite3_extended_errcode(db: *mut SQLite3) -> c_int;

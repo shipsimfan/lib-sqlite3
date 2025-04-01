@@ -1,7 +1,7 @@
 use crate::{SQLite3Int64, SQLite3Stmt, SQLite3UInt64};
 use std::ffi::{c_char, c_double, c_int, c_void};
 
-#[link(name = "sqlite3")]
+#[cfg_attr(target_os = "windows", link(name = "sqlite3-win"))]
 extern "C" {
     pub fn sqlite3_bind_blob(
         stmt: *mut SQLite3Stmt,
