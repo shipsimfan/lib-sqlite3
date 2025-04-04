@@ -15,6 +15,11 @@ impl SQLiteError {
     pub const fn new(code: c_int) -> Self {
         SQLiteError(code)
     }
+
+    /// Gets the code for the underlying error
+    pub const fn code(&self) -> c_int {
+        self.0
+    }
 }
 
 impl Error for SQLiteError {}
