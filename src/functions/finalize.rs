@@ -1,7 +1,7 @@
 use crate::SQLite3Stmt;
 use std::ffi::c_int;
 
-#[cfg_attr(target_os = "windows", link(name = "sqlite3-win"))]
+#[link(name = "sqlite3")]
 
 extern "C" {
     pub fn sqlite3_finalize(stmt: *mut SQLite3Stmt) -> c_int;
